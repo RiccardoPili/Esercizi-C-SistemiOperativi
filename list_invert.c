@@ -61,7 +61,7 @@ node *list_invert_rec(node *head) {
 }
 
 int main() {
-  int arr1[] = {1, 2, 3, 4, 5};
+  int arr1[] = {1, 2, 3, 4, 5, 6};
   node *l1 = ArrayToList(arr1, sizeof(arr1) / sizeof(int));
 
   printf("Lista iniziale: ");

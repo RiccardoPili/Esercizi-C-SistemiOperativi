@@ -33,6 +33,9 @@ node* ArrayToList(int A[], int n) {
 
 // ------------- ESERCIZIO ---------------------------
 
+/**
+ * Rimuove dalla lista i nodi con il valore minimo e i nodi con il valore massimo.
+ */
 node* list_cut_minmax(node* ls) {
   node* l = ls;
   int min = INT_MAX;

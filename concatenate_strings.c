@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * Concatena le stringhe di un array di puntatori a stringhe in una singola stringa.
+ */
 char* concatenate_strings(char** v, int n) {
   if (v == NULL || n <= 0) return NULL;
 

@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * Restituisce la sottostringa compresa tra la prima occorrenza (inclusa)
+ * del carattere sel e la successiva occorrenza (esclusa)
+ */
 char* get_sel(char* s, char sel) {
   char* result = NULL;
   int i;

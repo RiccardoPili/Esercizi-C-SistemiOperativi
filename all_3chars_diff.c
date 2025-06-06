@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * Restituisce true se la stringa non contiene due caratteri uguali
+ * ogni tre caratteri consecutivi.
+ * Ad esempio, "ABCDAC" restituisce true, mentre "ABCABA" restituisce false.
+ */
 int all_3chars_diff(char *s) {
   if (s == NULL || s[0] == '\0') return false;
   if (s[1] == '\0') return true;
