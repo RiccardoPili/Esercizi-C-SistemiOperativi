@@ -4,7 +4,7 @@
 
 /* VERSIONE CHE MANTIENE SOLO QUELLI TRA START E END*/
 /**
- * strtrim - Rimuove i caratteri tra gli indici start e end inclusi
+ * strtrim - Rimuove i caratteri non compresi tra gli indici start e end
  */
 char* strtrim(char* s, int start, int end) {
   if (s == NULL || start > end || start < 0 || end < 0 || end > strlen(s)) {
@@ -31,9 +31,9 @@ char* strtrim(char* s, int start, int end) {
 /**
  * strtrim2 - Rimuove i caratteri tra gli indici start e end inclusi
  */
-char* strtrim2(char* s, int start, int end) {
+char* strtrim_opposite(char* s, int start, int end) {
   if (s == NULL || start > end || start < 0 || end < 0 || end > strlen(s)) {
-    perror("Errore nell'utilizzo di strtrim");
+    perror("Errore nell'utilizzo di strtrim_opposite");
     exit(EXIT_FAILURE);
   }
 
@@ -60,8 +60,10 @@ char* strtrim2(char* s, int start, int end) {
 }
 
 int main() {
-  char* s = "Stringa da tagliare (da 2 a 12)";
-  char* res = strtrim(s, 2, 12);
-  char* res2 = strtrim2(s, 2, 12);
-  printf("%s\n%s\n%s\n", s, res, res2);
+  char* s = "SISTEMI OPERATIVI";
+  printf("Stringa iniziale: %s\n", s);
+  char* res = strtrim(s, 2, 10);
+  char* res2 = strtrim_opposite(s, 2, 10);
+  printf("strtim(2, 10): %s\n", res);
+  printf("strtrim_opposite(2, 10): %s\n", res2);
 }
